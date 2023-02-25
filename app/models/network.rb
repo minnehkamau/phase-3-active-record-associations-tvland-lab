@@ -1,8 +1,8 @@
 class Network < ActiveRecord::Base
-    belongs_to :show
+    has_many :shows
 
   def shows
-    Show.where(network_id: self.id)
+    Show.where(network_id:self.id)
   end
 
   def sorry
